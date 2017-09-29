@@ -45,6 +45,8 @@ ou
 docker-compose restart
 ```
 
+PS:  
+Tem que instalar o vim no container (shame -_-")
 
 ## Atualização:
 
