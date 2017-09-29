@@ -1,137 +1,75 @@
+# Tema cultura
+## Extensão do CKAN com os tema do Ministério da cultura
 
-=============
-ckanext-temacultura
-=============
+## Instalação
 
-.. Put a description of your extension here:
-   What does it do? What features does it have?
-   Consider including some screenshots or embedding a video!
+1. Rodar o docker-compose up na pasta do projeto
 
+```
+docker-compose up
+```
 
-------------
-Requirements
-------------
+2. entrar no container do ckan
 
-For example, you might want to mention here which versions of CKAN this
-extension works with.
+```
+docker exec -it [ID] /bin/bash
+```
 
+1. Ativar o ambiente virtual:
 
-------------
-Installation
-------------
+```
+. /usr/lib/ckan/default/bin/activate
+```
 
-.. Add any additional install steps to the list below.
-   For example installing any non-Python dependencies or adding any required
-   config settings.
+2. instalar o tema no ambiente:
 
-To install ckanext-temacultura:
+```
+cd /usr/lib/ckan/default/src/ckanext-temacultura
 
-1. Activate your CKAN virtual environment, for example::
+pip install .
+```
 
-     . /usr/lib/ckan/default/bin/activate
+3. inserir a extensão no ckan.ini, na linha de plugins
 
-2. Install the ckanext-temacultura Python package into your virtual environment::
+```
+vim /etc/ckan/default/ckan.ini
 
-     pip install ckanext-temacultura
+ckan.plugins = stats text_view image_view recline_view temacultura
+```
 
-3. Add ``temacultura`` to the ``ckan.plugins`` setting in your CKAN
-   config file (by default the config file is located at
-   ``/etc/ckan/default/production.ini``).
-
-4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
-
-     sudo service apache2 reload
-
-
----------------
-Config Settings
----------------
-
-Document any optional config settings here. For example::
-
-    # The minimum number of hours to wait before re-checking a resource
-    # (optional, default: 24).
-    ckanext.temacultura.some_setting = some_default_value
+4. restart no docker-compose (não tem como restartar o paster pois ele é o entrypoint do container (Pid1)
+```
+ctrl + c (caso a saída do compose esteja ligada ao seu sysout)
+ou
+docker-compose restart
+```
 
 
-------------------------
-Development Installation
-------------------------
+## Atualização:
 
-To install ckanext-temacultura for development, activate your CKAN virtualenv and
-do::
+1. entrar no container do ckan
 
-    git clone https://github.com/culturagovbr/ckanext-temacultura.git
-    cd ckanext-temacultura
-    python setup.py develop
-    pip install -r dev-requirements.txt
+```
+docker exec -it [ID] /bin/bash
+```
 
+2. Ativar o ambiente virtual:
 
------------------
-Running the Tests
------------------
+```
+. /usr/lib/ckan/default/bin/activate
+```
 
-To run the tests, do::
+3. entrar na pasta do projeto
 
-    nosetests --nologcapture --with-pylons=test.ini
+```
+cd /usr/lib/ckan/default/src/ckanext-temacultura
+```
 
-To run the tests and produce a coverage report, first make sure you have
-coverage installed in your virtualenv (``pip install coverage``) then run::
+4. rodar o install (build) da extensão:
 
-    nosetests --nologcapture --with-pylons=test.ini --with-coverage --cover-package=ckanext.temacultura --cover-inclusive --cover-erase --cover-tests
+```
+pip install . --upgrade
+```
 
-
----------------------------------
-Registering ckanext-temacultura on PyPI
----------------------------------
-
-ckanext-temacultura should be availabe on PyPI as
-https://pypi.python.org/pypi/ckanext-temacultura. If that link doesn't work, then
-you can register the project on PyPI for the first time by following these
-steps:
-
-1. Create a source distribution of the project::
-
-     python setup.py sdist
-
-2. Register the project::
-
-     python setup.py register
-
-3. Upload the source distribution to PyPI::
-
-     python setup.py sdist upload
-
-4. Tag the first release of the project on GitHub with the version number from
-   the ``setup.py`` file. For example if the version number in ``setup.py`` is
-   0.0.1 then do::
-
-       git tag 0.0.1
-       git push --tags
-
-
-----------------------------------------
-Releasing a New Version of ckanext-temacultura
-----------------------------------------
-
-ckanext-temacultura is availabe on PyPI as https://pypi.python.org/pypi/ckanext-temacultura.
-To publish a new version to PyPI follow these steps:
-
-1. Update the version number in the ``setup.py`` file.
-   See `PEP 440 <http://legacy.python.org/dev/peps/pep-0440/#public-version-identifiers>`_
-   for how to choose version numbers.
-
-2. Create a source distribution of the new version::
-
-     python setup.py sdist
-
-3. Upload the source distribution to PyPI::
-
-     python setup.py sdist upload
-
-4. Tag the new release of the project on GitHub with the version number from
-   the ``setup.py`` file. For example if the version number in ``setup.py`` is
-   0.0.2 then do::
-
-       git tag 0.0.2
-       git push --tags
+PS:  
+grande parte disso pode ser automatizado, podemos fazer isso para a próxima release <3
