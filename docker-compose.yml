@@ -16,6 +16,8 @@ ckan:
       - redis
   ports:
       - "80:5000"
+  volumes:
+      - "./ckanext-temacultura:/usr/lib/ckan/default/src"
   environment:
       - DB_PORT_5432_TCP_ADDR=db
       - SOLR_PORT_8983_TCP_ADDR=solr
