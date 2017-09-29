@@ -1,6 +1,6 @@
 # Tema cultura
 
-Extensão do CKAN com os tema do Ministério da cultura
+Extensão do CKAN com o tema do Ministério da cultura
 
 ## Instalação
 
