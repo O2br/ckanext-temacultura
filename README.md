@@ -51,7 +51,7 @@ docker-compose restart
 1. entrar no container do ckan
 
 ```
-docker exec -it [ID] /bin/bash
+docker exec -it ckan /bin/bash
 ```
 
 2. Ativar o ambiente virtual:
