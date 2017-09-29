@@ -13,7 +13,7 @@ docker-compose up
 2. entrar no container do ckan
 
 ```
-docker exec -it [ID] /bin/bash
+docker exec -it ckan /bin/bash
 ```
 
 1. Ativar o ambiente virtual:
