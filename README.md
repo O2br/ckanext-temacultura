@@ -1,32 +1,3 @@
-.. You should enable this project on travis-ci.org and coveralls.io to make
-   these badges work. The necessary Travis and Coverage config files have been
-   generated for you.
-
-.. image:: https://travis-ci.org/culturagovbr/ckanext-temacultura.svg?branch=master
-    :target: https://travis-ci.org/culturagovbr/ckanext-temacultura
-
-.. image:: https://coveralls.io/repos/culturagovbr/ckanext-temacultura/badge.svg
-  :target: https://coveralls.io/r/culturagovbr/ckanext-temacultura
-
-.. image:: https://pypip.in/download/ckanext-temacultura/badge.svg
-    :target: https://pypi.python.org/pypi//ckanext-temacultura/
-    :alt: Downloads
-
-.. image:: https://pypip.in/version/ckanext-temacultura/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-temacultura/
-    :alt: Latest Version
-
-.. image:: https://pypip.in/py_versions/ckanext-temacultura/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-temacultura/
-    :alt: Supported Python versions
-
-.. image:: https://pypip.in/status/ckanext-temacultura/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-temacultura/
-    :alt: Development Status
-
-.. image:: https://pypip.in/license/ckanext-temacultura/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-temacultura/
-    :alt: License
 
 =============
 ckanext-temacultura
