@@ -1,3 +1,10 @@
+<div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;"> 
+  <ul id="menu-barra-temp" style="list-style:none;">
+    <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED"><a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a></li> 
+    <li><a style="font-family:sans,sans-serif; text-decoration:none; color:white;" href="http://epwg.governoeletronico.gov.br/barra/atualize.html">Atualize sua Barra de Governo</a></li>
+  </ul>
+</div>
+
 {% extends "page.html" %}
 {% set homepage_style = ( g.homepage_style or '1' ) %}
 
@@ -43,7 +50,7 @@
           min-height: 251px;
       }
       header.navbar-static-top {
-          background-color: #275a65;
+          background: #00455a url(../../../base/images/bg.png);
           box-shadow: 0px 1px 1px #153035;
           z-index: 1;
           position: relative;
@@ -121,10 +128,12 @@
       }
       .estatisticas {
           background: rgb(255, 255, 255);
-          box-shadow: 3px 4px 3px #000 !important;
           display: block;
           min-height: 164px;
           overflow: visible;
+          position: relative;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          z-index: 1;
       }
       header.account-masthead, footer.site-footer, body {
           background-color: #163840;
@@ -143,6 +152,7 @@
             text-align: center;
             background-position: top center;
         }
+
       .estatisticas .stats ul li:nth-child(1) a {
           background-image: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ3NC41NTMsMjk2LjY5di00Mi41MDZjMC00LjUxMi0zLjY1Ny04LjE3LTguMTctOC4xN0gyNjQuMTd2LTMzLjU4OGgxMDguOTM2YzQuNTEzLDAsOC4xNy0zLjY1OCw4LjE3LTguMTd2LTQzLjU3NCAgICBjMC00LjUxMi0zLjY1Ny04LjE3LTguMTctOC4xN2gtMi43MjN2LTE2LjM0aDIuNzIzYzQuNTEzLDAsOC4xNy0zLjY1OCw4LjE3LTguMTdWODQuNDI2YzAtNC41MTItMy42NTctOC4xNy04LjE3LTguMTdoLTIuNzIzICAgIHYtMTYuMzRoMi43MjNjNC41MTMsMCw4LjE3LTMuNjU4LDguMTctOC4xN1Y4LjE3YzAtNC41MTItMy42NTctOC4xNy04LjE3LTguMTdIMTM4Ljg5NGMtNC41MTIsMC04LjE3LDMuNjU4LTguMTcsOC4xN3Y0My41NzQgICAgYzAsNC41MTIsMy42NTgsOC4xNyw4LjE3LDguMTdoMi43MjN2MTYuMzRoLTIuNzIzYy00LjUxMiwwLTguMTcsMy42NTgtOC4xNyw4LjE3VjEyOGMwLDQuNTEyLDMuNjU4LDguMTcsOC4xNyw4LjE3aDIuNzIzdjE2LjM0ICAgIGgtMi43MjNjLTQuNTEyLDAtOC4xNywzLjY1OC04LjE3LDguMTd2NDMuNTc0YzAsNC41MTIsMy42NTgsOC4xNyw4LjE3LDguMTdIMjQ3LjgzdjMzLjU4OEg0NS42MTdjLTQuNTEyLDAtOC4xNywzLjY1OC04LjE3LDguMTcgICAgdjQyLjUwNkMxNi4xODEsMzAwLjU1NCwwLDMxOS4xOTcsMCwzNDEuNTYxYzAsMjUuMTUzLDIwLjQ2NCw0NS42MTcsNDUuNjE3LDQ1LjYxN2MyNS4xNTMsMCw0NS42MTctMjAuNDY0LDQ1LjYxNy00NS42MTcgICAgYzAtMjIuMzY0LTE2LjE4MS00MS4wMDctMzcuNDQ3LTQ0Ljg3di0zNC4zMzZoMTIzLjkxNXYzNC4zMzZjLTIxLjI2NSwzLjg2My0zNy40NDcsMjIuNTA2LTM3LjQ0Nyw0NC44NyAgICBjMCwyNS4xNTMsMjAuNDY0LDQ1LjYxNyw0NS42MTcsNDUuNjE3YzI1LjE1MywwLDQ1LjYxNy0yMC40NjQsNDUuNjE3LTQ1LjYxN2MwLTIyLjM2NC0xNi4xODEtNDEuMDA3LTM3LjQ0Ny00NC44N3YtMzQuMzM2ICAgIGgxMjMuOTE1djM0LjMzNmMtMjEuMjY1LDMuODYzLTM3LjQ0NywyMi41MDYtMzcuNDQ3LDQ0Ljg3YzAsMjUuMTUzLDIwLjQ2NCw0NS42MTcsNDUuNjE3LDQ1LjYxNyAgICBjMjUuMTUzLDAsNDUuNjE3LTIwLjQ2NCw0NS42MTctNDUuNjE3YzAtMjIuMzY0LTE2LjE4MS00MS4wMDctMzcuNDQ3LTQ0Ljg3di0zNC4zMzZoMTIzLjkxNXYzNC4zMzYgICAgYy0yMS4yNjUsMy44NjMtMzcuNDQ3LDIyLjUwNi0zNy40NDcsNDQuODdjMCwyNS4xNTMsMjAuNDY0LDQ1LjYxNyw0NS42MTcsNDUuNjE3YzI1LjE1MywwLDQ1LjYxNy0yMC40NjUsNDUuNjE3LTQ1LjYxNyAgICBDNTEyLDMxOS4xOTcsNDk1LjgxOSwzMDAuNTU0LDQ3NC41NTMsMjk2LjY5eiBNNzQuODk0LDM0MS41NjFjMCwxNi4xNDMtMTMuMTMzLDI5LjI3Ny0yOS4yNzcsMjkuMjc3ICAgIGMtMTYuMTQzLDAtMjkuMjc3LTEzLjEzNC0yOS4yNzctMjkuMjc3czEzLjEzMy0yOS4yNzcsMjkuMjc3LTI5LjI3N0M2MS43NiwzMTIuMjg0LDc0Ljg5NCwzMjUuNDE3LDc0Ljg5NCwzNDEuNTYxeiAgICAgTTIxNS4xNDksMzQxLjU2MWMwLDE2LjE0My0xMy4xMzMsMjkuMjc3LTI5LjI3NywyOS4yNzdzLTI5LjI3Ny0xMy4xMzMtMjkuMjc3LTI5LjI3N3MxMy4xMzMtMjkuMjc3LDI5LjI3Ny0yOS4yNzcgICAgUzIxNS4xNDksMzI1LjQxNywyMTUuMTQ5LDM0MS41NjF6IE0xNDcuMDY0LDE2LjM0aDIxNy44NzJ2MjcuMjM0SDE0Ny4wNjRWMTYuMzR6IE0zNTQuMDQzLDU5LjkxNXYxNi4zNEgxNTcuOTU3di0xNi4zNEgzNTQuMDQzeiAgICAgTTE0Ny4wNjQsOTIuNTk2aDIxNy44NzJ2MjcuMjM0aC0zNS40MDRjLTQuNTEzLDAtOC4xNywzLjY1OC04LjE3LDguMTdzMy42NTcsOC4xNyw4LjE3LDguMTdoMjQuNTExdjE2LjM0SDE1Ny45NTd2LTE2LjM0ICAgIGgxMzguODk0YzQuNTEzLDAsOC4xNy0zLjY1OCw4LjE3LTguMTdzLTMuNjU3LTguMTctOC4xNy04LjE3SDE0Ny4wNjRWOTIuNTk2eiBNMTQ3LjA2NCwxOTYuMDg1di0yNy4yMzRoMjE3Ljg3MnYyNy4yMzRIMTQ3LjA2NHogICAgIE0zNTUuNDA0LDM0MS41NjFjMCwxNi4xNDMtMTMuMTMzLDI5LjI3Ny0yOS4yNzcsMjkuMjc3cy0yOS4yNzctMTMuMTM0LTI5LjI3Ny0yOS4yNzdzMTMuMTMzLTI5LjI3NywyOS4yNzctMjkuMjc3ICAgIFMzNTUuNDA0LDMyNS40MTcsMzU1LjQwNCwzNDEuNTYxeiBNNDY2LjM4MywzNzAuODM3Yy0xNi4xNDMsMC0yOS4yNzctMTMuMTMzLTI5LjI3Ny0yOS4yNzdzMTMuMTMzLTI5LjI3NywyOS4yNzctMjkuMjc3ICAgIHMyOS4yNzcsMTMuMTMzLDI5LjI3NywyOS4yNzdTNDgyLjUyNiwzNzAuODM3LDQ2Ni4zODMsMzcwLjgzN3oiIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xNTMuMTkyLDQyMC43NjZoLTI5LjI3N1YyODYuODY1YzAtNC41MTItMy42NTgtOC4xNy04LjE3LTguMTdzLTguMTcsMy42NTgtOC4xNyw4LjE3djEzMy45MDFINzguMjk4ICAgIGMtNC41MTIsMC04LjE3LDMuNjU4LTguMTcsOC4xN3Y3NC44OTRjMCw0LjUxMiwzLjY1OCw4LjE3LDguMTcsOC4xN2g3NC44OTRjNC41MTIsMCw4LjE3LTMuNjU4LDguMTctOC4xN3YtNzQuODk0ICAgIEMxNjEuMzYyLDQyNC40MjQsMTU3LjcwNCw0MjAuNzY2LDE1My4xOTIsNDIwLjc2NnogTTE0NS4wMjEsNDk1LjY2SDg2LjQ2OHYtNTguNTUzaDU4LjU1M1Y0OTUuNjZ6IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjkzLjQ0Nyw0MjAuNzY2SDI2NC4xN1YyODYuODY1YzAtNC41MTItMy42NTctOC4xNy04LjE3LTguMTdjLTQuNTEyLDAtOC4xNywzLjY1OC04LjE3LDguMTd2MTMzLjkwMWgtMjkuMjc3ICAgIGMtNC41MTIsMC04LjE3LDMuNjU4LTguMTcsOC4xN3Y3NC44OTRjMCw0LjUxMiwzLjY1OCw4LjE3LDguMTcsOC4xN2g3NC44OTRjNC41MTMsMCw4LjE3LTMuNjU4LDguMTctOC4xN3YtNzQuODk0ICAgIEMzMDEuNjE3LDQyNC40MjQsMjk3Ljk2LDQyMC43NjYsMjkzLjQ0Nyw0MjAuNzY2eiBNMjg1LjI3Nyw0OTUuNjZoLTU4LjU1M3YtNTguNTUzaDU4LjU1M1Y0OTUuNjZ6IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDMzLjcwMiw0MjAuNzY2aC0yOS4yNzdWMjg2Ljg2NWMwLTQuNTEyLTMuNjU3LTguMTctOC4xNy04LjE3cy04LjE3LDMuNjU4LTguMTcsOC4xN3YxMzMuOTAxaC0yOS4yNzcgICAgYy00LjUxMywwLTguMTcsMy42NTgtOC4xNyw4LjE3djc0Ljg5NGMwLDQuNTEyLDMuNjU3LDguMTcsOC4xNyw4LjE3aDc0Ljg5NGM0LjUxMywwLDguMTctMy42NTgsOC4xNy04LjE3di03NC44OTQgICAgQzQ0MS44NzIsNDI0LjQyNCw0MzguMjE1LDQyMC43NjYsNDMzLjcwMiw0MjAuNzY2eiBNNDI1LjUzMiw0OTUuNjZoLTU4LjU1M3YtNTguNTUzaDU4LjU1M1Y0OTUuNjZ6IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==");
       }
@@ -198,3 +208,6 @@
       </div>
   </div>
 {% endblock %}
+
+<script defer="defer" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
+<div id="footer-brasil"></div> 
