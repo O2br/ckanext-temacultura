@@ -76,3 +76,27 @@ pip install . --upgrade
 
 PS:  
 grande parte disso pode ser automatizado, podemos fazer isso para a próxima release <3
+
+## Criando users admins e datasets de teste (ambiente dev)
+
+1. entrar no container ckan
+
+```
+docker exec -it ckan /bin/bash
+```
+
+2. modificar a url de acesso ao banco (está errada nesse arquivo de configuraçes):
+
+```
+vim /etc/ckan/default/ckan.ini
+
+sqlalchemy.url = postgresql://ckan:ckan@db/ckan
+```
+
+3. rodar o comando de criação de admin ou criação da base de testes
+
+```
+ckan-paster --plugin=ckan sysadmin add admin --config=/etc/ckan/default/development.ini
+ou
+ckan-paster --plugin=ckan create-test-data -c /etc/ckan/default/development.ini
+```
