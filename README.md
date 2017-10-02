@@ -91,6 +91,9 @@ docker exec -it ckan /bin/bash
 vim /etc/ckan/default/ckan.ini
 
 sqlalchemy.url = postgresql://ckan:ckan@db/ckan
+
+# caso use o comando de criação de datasets
+solr_url =http://solr:8983/solr/ckan
 ```
 
 3. rodar o comando de criação de admin ou criação da base de testes
