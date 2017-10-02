@@ -1,3 +1,4 @@
+
 {% extends "page.html" %}
 {% set homepage_style = ( g.homepage_style or '1' ) %}
 
@@ -7,44 +8,177 @@
 {% block toolbar %}{% endblock %}
 
 {% block content %}
+<style>
+      header.navbar-static-top {
+        background-color: #039696;
+      }
+      
+      header.account-masthead,
+      footer.site-footer,
+      body {
+        background-color: #416469;
+      }
+      
+      header.navbar-static-top img {
+        width: 30px;
+        margin-top: 12px;
+      }
+      
+      header.navbar-static-top img:after {
+        content: "Dados" !important;
+      }
+      
+      header .logo img {
+        height: 31px;
+        width: auto;
+      }
+      
+      .hero {
+        background: url(images/dados-Recuperado2_02.png);
+        background-size: contain;
+        background-repeat: repeat-x;
+        background-position: bottom;
+      }
+      [role=main] {
+          min-height: 251px;
+      }
+      header.navbar-static-top {
+          background-color: #275a65;
+          box-shadow: 0px 1px 1px #153035;
+          z-index: 1;
+          position: relative;
+      }
+      .navbar .nav>li>a {
+          float: none;
+          padding: 10px 15px 10px;
+          color: #72c4d6;
+          text-decoration: none;
+          text-transform: uppercase;
+          border-right: 1px solid #3b8696;
+          text-shadow: 0 1px 0 #17353c;
+          border-radius: 0;
+      }
+      .homepage .module-search {
+          padding: 5px;
+          margin: 20px 0 0 0;
+          color: #ffffff;
+          background: #ffffff;
+          width: 500px;
+          max-width: 100%;
+          margin: 0 auto;
+          text-align: center;
+          box-shadow: none;
+          border: 0;
+          background: transparent;
+      }
+      .homepage .module-search .module-content {
+          background: transparent;
+      }
+      .homepage .module-search .search-giant input {
+          border: none;
+          border-radius: 35px;
+          box-shadow: 0px 2px 7px #275a65;
+      }
+      .homepage .module-search .tags {
+          background: transparent;
+      }
+      .homepage .module-search .module-content .heading {
+          margin-top: 0;
+          margin-bottom: 7px;
+          font-size: 24px;
+          text-shadow: 1px 1px 1px #275a65;
+          line-height: 40px;
+      }
+      a.tag {
+          background: rgba(39, 90, 101, 0.45);
+          color: #fff;
+          padding: 5px;
+          text-transform: uppercase;
+          padding-left: 15px;
+          border: none;
+          box-shadow: none;
+          padding-right: 15px;
+      }
+      .homepage .module-search .tags h3 {
+          text-shadow: 1px 1px 1px #275a65;
+      }
+      .homepage.layout-2 .estatisticas .stats {
+          border: 0;
+          background: transparent;
+          box-shadow: none;
+          text-align: center;
+      }
+      .estatisticas .stats ul li a {
+          display: block;
+          color: #1f6e7e;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 11px;
+      }
+      .homepage .stats h3 {
+          margin: 0 0 10px 0;
+          display: none;
+      }
+      .homepage .stats ul li a b {
+          display: block;
+          font-weight: 300;
+          font-size: 35px;
+          line-height: 1.5;
+          font-family: roboto;
+      }
+      .estatisticas {
+          background: rgb(255, 255, 255);
+          box-shadow: 3px 4px 3px #000 !important;
+          display: block;
+          min-height: 164px;
+          overflow: visible;
+      }
+      header.account-masthead, footer.site-footer, body {
+          background-color: #163840;
+      }
+    </style>
   <div class="homepage layout-theme">
-    <div role="main" class="hero">
-  <div class="container">
-    <div class="row row1">
-      <div class="col-md-6 col1">
-        {% block search %}
-          {% snippet 'home/snippets/search.html' %}
-        {% endblock %}
-        {% block stats %}
-          {% snippet 'home/snippets/stats.html' %}
-        {% endblock %}
+      <div role="main" class="hero">
+        <div class="container">
+          <div class="row row1">
+
+              {% block search %}
+                {% snippet 'home/snippets/search.html' %}
+              {% endblock %}
+              
+
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 col2">
-        {% block promoted %}
-          {% snippet 'home/snippets/promoted.html' %}
-        {% endblock %}
+      <div role="main" class="estatisticas">
+        <div class="container">
+          <div class="row row1">
+    
+              {% block stats %}
+                {% snippet 'home/snippets/stats.html' %}
+              {% endblock %}
+           
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-<div role="main">
-  <div class="container">
-    <div class="row row2">
-      <div class="col-md-6 col2">
-        {% block featured_organization %}
-          {% snippet 'home/snippets/featured_organization.html' %}
-        {% endblock %}
+      <div role="main">
+      <div class="container">
+      <div class="row row2">
+        <div class="col-md-6 col2">
+          {% block featured_organization %}
+            {% snippet 'home/snippets/featured_organization.html' %}
+          {% endblock %}
+        </div>
+        <div class="col-md-6 col1">
+          {% block featured_group %}
+            {% snippet 'home/snippets/featured_group.html' %}
+          {% endblock %}
+        </div>
       </div>
-      <div class="col-md-6 col1">
-        {% block featured_group %}
-          {% snippet 'home/snippets/featured_group.html' %}
-        {% endblock %}
       </div>
-    </div>
-  </div>
-</div>
-    {% block primary_content %}
-      {% snippet "home/layout{0}.html".format(homepage_style) %}
-    {% endblock %}
+      </div>
+      {% block primary_content %}
+        {% snippet "home/layout{0}.html".format(homepage_style) %}
+      {% endblock %}
   </div>
 {% endblock %}
