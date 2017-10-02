@@ -1,1 +1,638 @@
-{% ckan_extends %}
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://dados.cultura.gov.br/ -->
+<html lang="pt_BR" class=" js">
+  <!--<![endif]-->
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--[if lte ie 8]><script type="text/javascript" src="/fanstatic/vendor/:version:2015-08-19T16:42:50.23/html5.min.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="./images/select2.css">
+    <link rel="stylesheet" type="text/css" href="./images/main.min.css">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <!--[if ie 7]><link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2015-08-19T16:42:50.23/font-awesome/css/font-awesome-ie7.min.css" /><![endif]-->
+
+
+    <meta name="generator" content="ckan 2.4.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo - Portal de Dados da Cultura</title>
+
+
+    <link rel="shortcut icon" href="http://dados.cultura.gov.br/images/icons/ckan.ico">
+
+
+
+
+
+
+
+    <style>
+      header.navbar-static-top {
+        background-color: #039696;
+      }
+      
+      header.account-masthead,
+      footer.site-footer,
+      body {
+        background-color: #416469;
+      }
+      
+      header.navbar-static-top img {
+        width: 30px;
+        margin-top: 12px;
+      }
+      
+      header.navbar-static-top img:after {
+        content: "Dados" !important;
+      }
+      
+      header .logo img {
+        height: 31px;
+        width: auto;
+      }
+      
+      .hero {
+        background: url(images/dados-Recuperado2_02.png);
+        background-size: contain;
+        background-repeat: repeat-x;
+        background-position: bottom;
+      }
+      [role=main] {
+          min-height: 251px;
+      }
+      header.navbar-static-top {
+          background-color: #275a65;
+          box-shadow: 0px 1px 1px #153035;
+          z-index: 1;
+          position: relative;
+      }
+      .navbar .nav>li>a {
+          float: none;
+          padding: 10px 15px 10px;
+          color: #72c4d6;
+          text-decoration: none;
+          text-transform: uppercase;
+          border-right: 1px solid #3b8696;
+          text-shadow: 0 1px 0 #17353c;
+          border-radius: 0;
+      }
+      .homepage .module-search {
+          padding: 5px;
+          margin: 20px 0 0 0;
+          color: #ffffff;
+          background: #ffffff;
+          width: 500px;
+          max-width: 100%;
+          margin: 0 auto;
+          text-align: center;
+          box-shadow: none;
+          border: 0;
+          background: transparent;
+      }
+      .homepage .module-search .module-content {
+          background: transparent;
+      }
+      .homepage .module-search .search-giant input {
+          border: none;
+          border-radius: 35px;
+          box-shadow: 0px 2px 7px #275a65;
+      }
+      .homepage .module-search .tags {
+          background: transparent;
+      }
+      .homepage .module-search .module-content .heading {
+          margin-top: 0;
+          margin-bottom: 7px;
+          font-size: 24px;
+          text-shadow: 1px 1px 1px #275a65;
+          line-height: 40px;
+      }
+      a.tag {
+          background: rgba(39, 90, 101, 0.45);
+          color: #fff;
+          padding: 5px;
+          text-transform: uppercase;
+          padding-left: 15px;
+          border: none;
+          box-shadow: none;
+          padding-right: 15px;
+      }
+      .homepage .module-search .tags h3 {
+          text-shadow: 1px 1px 1px #275a65;
+      }
+      .homepage.layout-2 .estatisticas .stats {
+          border: 0;
+          background: transparent;
+          box-shadow: none;
+          text-align: center;
+      }
+      .estatisticas .stats ul li a {
+          display: block;
+          color: #1f6e7e;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 11px;
+      }
+      .homepage .stats h3 {
+          margin: 0 0 10px 0;
+          display: none;
+      }
+      .homepage .stats ul li a b {
+          display: block;
+          font-weight: 300;
+          font-size: 35px;
+          line-height: 1.5;
+          font-family: roboto;
+      }
+      .estatisticas {
+          background: rgb(255, 255, 255);
+          box-shadow: 3px 4px 3px #000 !important;
+          display: block;
+          min-height: 164px;
+          overflow: visible;
+      }
+      header.account-masthead, footer.site-footer, body {
+          background-color: #163840;
+      }
+    </style>
+
+  </head>
+
+
+  <body data-site-root="http://dados.cultura.gov.br/" data-locale-root="http://dados.cultura.gov.br/" style="">
+
+
+    <div class="hide"><a href="http://dados.cultura.gov.br/#content">Pular para o conteúdo</a></div>
+
+
+
+
+
+    <header class="account-masthead">
+      <div class="container">
+
+
+        <div class="account avatar authed" data-module="me" data-me="2f59dff2-acc5-4b79-b837-4b5f7bcd5130">
+          <ul class="unstyled">
+
+
+            <li>
+              <a href="http://dados.cultura.gov.br/ckan-admin" title="Configurações de administração do sistema">
+                <i class="icon-legal" aria-hidden="true"></i>
+                <span class="text">Administrador</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="http://dados.cultura.gov.br/user/nitai" class="image" title="Visualizar Perfil">
+                <img src="./images/09d98b98a233cad36f0675daf7a5f91a" class="gravatar" width="22" height="22">
+                <span class="username">Nitai Bezerra da Silva</span>
+              </a>
+            </li>
+
+            <li class="notifications ">
+
+              <a href="http://dados.cultura.gov.br/dashboard" title="Painel de Controle (0 novo item)">
+                <i class="icon-dashboard" aria-hidden="true"></i>
+                <span class="text">Painel de Controle</span>
+                <span class="badge">0</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="http://dados.cultura.gov.br/user/edit/nitai" title="Editar configurações">
+                <i class="icon-cog" aria-hidden="true"></i>
+                <span class="text">Configurações</span>
+              </a>
+            </li>
+
+
+            <li>
+              <a href="http://dados.cultura.gov.br/user/_logout" title="Sair">
+                <i class="icon-signout" aria-hidden="true"></i>
+                <span class="text">Sair</span>
+              </a>
+            </li>
+
+
+          </ul>
+        </div>
+
+
+      </div>
+    </header>
+
+    <header class="navbar navbar-static-top masthead">
+
+
+
+      <div class="container">
+        <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <hgroup class="header-image pull-left">
+
+
+
+          <a class="logo" href="http://dados.cultura.gov.br/"><img src="./images/sub.dados.composite.white.svg" alt="Portal de Dados da Cultura" title="Portal de Dados da Cultura"></a>
+
+
+
+        </hgroup>
+
+        <div class="nav-collapse collapse">
+
+
+          <nav class="section navigation">
+            <ul class="nav nav-pills">
+
+              <li><a href="http://dados.cultura.gov.br/dataset">Conjuntos de dados</a></li>
+              <li><a href="http://dados.cultura.gov.br/organization">Organizações</a></li>
+              <li><a href="http://dados.cultura.gov.br/group">Grupos</a></li>
+              <li><a href="http://dados.cultura.gov.br/about">Sobre</a></li>
+
+            </ul>
+          </nav>
+
+
+
+          <form class="section site-search simple-input" action="http://dados.cultura.gov.br/dataset" method="get">
+            <div class="field">
+              <label for="field-sitewide-search">Buscar conjunto de dados</label>
+              <!--<input id="field-sitewide-search" type="text" name="q" placeholder="Pesquisar">
+              <button class="btn-search" type="submit"><i class="icon-search"></i></button>-->
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+    </header>
+
+
+    <div class="homepage layout-2">
+      <div class="container">
+
+        <div class="flash-messages">
+
+
+
+        </div>
+
+      </div>
+
+
+      <!-- Snippet home/layout2.html start -->
+      <div role="main" class="hero">
+        <div class="container">
+            <div class="module module-search module-narrow module-shallow box">
+              <form class="module-content search-form" method="get" action="http://dados.cultura.gov.br/dataset">
+                <h3 class="heading">Pesquisar dados</h3>
+                <div class="search-input control-group search-giant">
+                  <input type="text" class="search" name="q" value="" autocomplete="off" placeholder="Ex.: meio ambiente">
+                  <button type="submit">
+                    <i class="icon-search"></i>
+                    <span>Pesquisar</span>
+                  </button>
+                </div>
+              </form>
+              <div class="tags">
+                <h3>Etiquetas populares</h3>
+
+                <a class="tag" href="http://dados.cultura.gov.br/dataset?tags=cultura">cultura</a>
+
+                <a class="tag" href="http://dados.cultura.gov.br/dataset?tags=cinema">cinema</a>
+
+                <a class="tag" href="http://dados.cultura.gov.br/dataset?tags=filme">filme</a>
+
+              </div>
+            </div>
+        </div>
+      </div>
+       <div role="main" class="estatisticas">
+          <div class="container">
+              <div class="row row1">
+              <div class="box stats">
+                <div class="inner">
+                  <h3>Portal de Dados da Cultura estatísticas</h3>
+                  <ul>
+
+                    <li>
+                      <a href="http://dados.cultura.gov.br/dataset">
+                        <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ3NC41NTMsMjk2LjY5di00Mi41MDZjMC00LjUxMi0zLjY1Ny04LjE3LTguMTctOC4xN0gyNjQuMTd2LTMzLjU4OGgxMDguOTM2YzQuNTEzLDAsOC4xNy0zLjY1OCw4LjE3LTguMTd2LTQzLjU3NCAgICBjMC00LjUxMi0zLjY1Ny04LjE3LTguMTctOC4xN2gtMi43MjN2LTE2LjM0aDIuNzIzYzQuNTEzLDAsOC4xNy0zLjY1OCw4LjE3LTguMTdWODQuNDI2YzAtNC41MTItMy42NTctOC4xNy04LjE3LTguMTdoLTIuNzIzICAgIHYtMTYuMzRoMi43MjNjNC41MTMsMCw4LjE3LTMuNjU4LDguMTctOC4xN1Y4LjE3YzAtNC41MTItMy42NTctOC4xNy04LjE3LTguMTdIMTM4Ljg5NGMtNC41MTIsMC04LjE3LDMuNjU4LTguMTcsOC4xN3Y0My41NzQgICAgYzAsNC41MTIsMy42NTgsOC4xNyw4LjE3LDguMTdoMi43MjN2MTYuMzRoLTIuNzIzYy00LjUxMiwwLTguMTcsMy42NTgtOC4xNyw4LjE3VjEyOGMwLDQuNTEyLDMuNjU4LDguMTcsOC4xNyw4LjE3aDIuNzIzdjE2LjM0ICAgIGgtMi43MjNjLTQuNTEyLDAtOC4xNywzLjY1OC04LjE3LDguMTd2NDMuNTc0YzAsNC41MTIsMy42NTgsOC4xNyw4LjE3LDguMTdIMjQ3LjgzdjMzLjU4OEg0NS42MTdjLTQuNTEyLDAtOC4xNywzLjY1OC04LjE3LDguMTcgICAgdjQyLjUwNkMxNi4xODEsMzAwLjU1NCwwLDMxOS4xOTcsMCwzNDEuNTYxYzAsMjUuMTUzLDIwLjQ2NCw0NS42MTcsNDUuNjE3LDQ1LjYxN2MyNS4xNTMsMCw0NS42MTctMjAuNDY0LDQ1LjYxNy00NS42MTcgICAgYzAtMjIuMzY0LTE2LjE4MS00MS4wMDctMzcuNDQ3LTQ0Ljg3di0zNC4zMzZoMTIzLjkxNXYzNC4zMzZjLTIxLjI2NSwzLjg2My0zNy40NDcsMjIuNTA2LTM3LjQ0Nyw0NC44NyAgICBjMCwyNS4xNTMsMjAuNDY0LDQ1LjYxNyw0NS42MTcsNDUuNjE3YzI1LjE1MywwLDQ1LjYxNy0yMC40NjQsNDUuNjE3LTQ1LjYxN2MwLTIyLjM2NC0xNi4xODEtNDEuMDA3LTM3LjQ0Ny00NC44N3YtMzQuMzM2ICAgIGgxMjMuOTE1djM0LjMzNmMtMjEuMjY1LDMuODYzLTM3LjQ0NywyMi41MDYtMzcuNDQ3LDQ0Ljg3YzAsMjUuMTUzLDIwLjQ2NCw0NS42MTcsNDUuNjE3LDQ1LjYxNyAgICBjMjUuMTUzLDAsNDUuNjE3LTIwLjQ2NCw0NS42MTctNDUuNjE3YzAtMjIuMzY0LTE2LjE4MS00MS4wMDctMzcuNDQ3LTQ0Ljg3di0zNC4zMzZoMTIzLjkxNXYzNC4zMzYgICAgYy0yMS4yNjUsMy44NjMtMzcuNDQ3LDIyLjUwNi0zNy40NDcsNDQuODdjMCwyNS4xNTMsMjAuNDY0LDQ1LjYxNyw0NS42MTcsNDUuNjE3YzI1LjE1MywwLDQ1LjYxNy0yMC40NjUsNDUuNjE3LTQ1LjYxNyAgICBDNTEyLDMxOS4xOTcsNDk1LjgxOSwzMDAuNTU0LDQ3NC41NTMsMjk2LjY5eiBNNzQuODk0LDM0MS41NjFjMCwxNi4xNDMtMTMuMTMzLDI5LjI3Ny0yOS4yNzcsMjkuMjc3ICAgIGMtMTYuMTQzLDAtMjkuMjc3LTEzLjEzNC0yOS4yNzctMjkuMjc3czEzLjEzMy0yOS4yNzcsMjkuMjc3LTI5LjI3N0M2MS43NiwzMTIuMjg0LDc0Ljg5NCwzMjUuNDE3LDc0Ljg5NCwzNDEuNTYxeiAgICAgTTIxNS4xNDksMzQxLjU2MWMwLDE2LjE0My0xMy4xMzMsMjkuMjc3LTI5LjI3NywyOS4yNzdzLTI5LjI3Ny0xMy4xMzMtMjkuMjc3LTI5LjI3N3MxMy4xMzMtMjkuMjc3LDI5LjI3Ny0yOS4yNzcgICAgUzIxNS4xNDksMzI1LjQxNywyMTUuMTQ5LDM0MS41NjF6IE0xNDcuMDY0LDE2LjM0aDIxNy44NzJ2MjcuMjM0SDE0Ny4wNjRWMTYuMzR6IE0zNTQuMDQzLDU5LjkxNXYxNi4zNEgxNTcuOTU3di0xNi4zNEgzNTQuMDQzeiAgICAgTTE0Ny4wNjQsOTIuNTk2aDIxNy44NzJ2MjcuMjM0aC0zNS40MDRjLTQuNTEzLDAtOC4xNywzLjY1OC04LjE3LDguMTdzMy42NTcsOC4xNyw4LjE3LDguMTdoMjQuNTExdjE2LjM0SDE1Ny45NTd2LTE2LjM0ICAgIGgxMzguODk0YzQuNTEzLDAsOC4xNy0zLjY1OCw4LjE3LTguMTdzLTMuNjU3LTguMTctOC4xNy04LjE3SDE0Ny4wNjRWOTIuNTk2eiBNMTQ3LjA2NCwxOTYuMDg1di0yNy4yMzRoMjE3Ljg3MnYyNy4yMzRIMTQ3LjA2NHogICAgIE0zNTUuNDA0LDM0MS41NjFjMCwxNi4xNDMtMTMuMTMzLDI5LjI3Ny0yOS4yNzcsMjkuMjc3cy0yOS4yNzctMTMuMTM0LTI5LjI3Ny0yOS4yNzdzMTMuMTMzLTI5LjI3NywyOS4yNzctMjkuMjc3ICAgIFMzNTUuNDA0LDMyNS40MTcsMzU1LjQwNCwzNDEuNTYxeiBNNDY2LjM4MywzNzAuODM3Yy0xNi4xNDMsMC0yOS4yNzctMTMuMTMzLTI5LjI3Ny0yOS4yNzdzMTMuMTMzLTI5LjI3NywyOS4yNzctMjkuMjc3ICAgIHMyOS4yNzcsMTMuMTMzLDI5LjI3NywyOS4yNzdTNDgyLjUyNiwzNzAuODM3LDQ2Ni4zODMsMzcwLjgzN3oiIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xNTMuMTkyLDQyMC43NjZoLTI5LjI3N1YyODYuODY1YzAtNC41MTItMy42NTgtOC4xNy04LjE3LTguMTdzLTguMTcsMy42NTgtOC4xNyw4LjE3djEzMy45MDFINzguMjk4ICAgIGMtNC41MTIsMC04LjE3LDMuNjU4LTguMTcsOC4xN3Y3NC44OTRjMCw0LjUxMiwzLjY1OCw4LjE3LDguMTcsOC4xN2g3NC44OTRjNC41MTIsMCw4LjE3LTMuNjU4LDguMTctOC4xN3YtNzQuODk0ICAgIEMxNjEuMzYyLDQyNC40MjQsMTU3LjcwNCw0MjAuNzY2LDE1My4xOTIsNDIwLjc2NnogTTE0NS4wMjEsNDk1LjY2SDg2LjQ2OHYtNTguNTUzaDU4LjU1M1Y0OTUuNjZ6IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjkzLjQ0Nyw0MjAuNzY2SDI2NC4xN1YyODYuODY1YzAtNC41MTItMy42NTctOC4xNy04LjE3LTguMTdjLTQuNTEyLDAtOC4xNywzLjY1OC04LjE3LDguMTd2MTMzLjkwMWgtMjkuMjc3ICAgIGMtNC41MTIsMC04LjE3LDMuNjU4LTguMTcsOC4xN3Y3NC44OTRjMCw0LjUxMiwzLjY1OCw4LjE3LDguMTcsOC4xN2g3NC44OTRjNC41MTMsMCw4LjE3LTMuNjU4LDguMTctOC4xN3YtNzQuODk0ICAgIEMzMDEuNjE3LDQyNC40MjQsMjk3Ljk2LDQyMC43NjYsMjkzLjQ0Nyw0MjAuNzY2eiBNMjg1LjI3Nyw0OTUuNjZoLTU4LjU1M3YtNTguNTUzaDU4LjU1M1Y0OTUuNjZ6IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDMzLjcwMiw0MjAuNzY2aC0yOS4yNzdWMjg2Ljg2NWMwLTQuNTEyLTMuNjU3LTguMTctOC4xNy04LjE3cy04LjE3LDMuNjU4LTguMTcsOC4xN3YxMzMuOTAxaC0yOS4yNzcgICAgYy00LjUxMywwLTguMTcsMy42NTgtOC4xNyw4LjE3djc0Ljg5NGMwLDQuNTEyLDMuNjU3LDguMTcsOC4xNyw4LjE3aDc0Ljg5NGM0LjUxMywwLDguMTctMy42NTgsOC4xNy04LjE3di03NC44OTQgICAgQzQ0MS44NzIsNDI0LjQyNCw0MzguMjE1LDQyMC43NjYsNDMzLjcwMiw0MjAuNzY2eiBNNDI1LjUzMiw0OTUuNjZoLTU4LjU1M3YtNTguNTUzaDU4LjU1M1Y0OTUuNjZ6IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+                        <b><span>14</span></b> conjuntos de dados
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://dados.cultura.gov.br/organization">
+                        <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQzNy4wMTksNzQuOTgxQzM4OC42NjgsMjYuNjI4LDMyNC4zOCwwLDI1NiwwUzEyMy4zMzIsMjYuNjI4LDc0Ljk4MSw3NC45ODFDMjYuNjI4LDEyMy4zMzIsMCwxODcuNjIsMCwyNTYgICAgczI2LjYyOCwxMzIuNjY4LDc0Ljk4MSwxODEuMDE5QzEyMy4zMzIsNDg1LjM3MiwxODcuNjIsNTEyLDI1Niw1MTJzMTMyLjY2OC0yNi42MjgsMTgxLjAxOS03NC45ODEgICAgQzQ4NS4zNzIsMzg4LjY2OCw1MTIsMzI0LjM4LDUxMiwyNTZTNDg1LjM3MiwxMjMuMzMyLDQzNy4wMTksNzQuOTgxeiBNNDk1LjUwNSwyNDcuODNoLTQ5LjA1MyAgICBjLTEuOTY3LTQ2LjQxMi0yMC42MDEtODguNTgxLTUwLjA2NS0xMjAuNjYybDM0LjY2Ni0zNC42NjdDNDY5LjM2NywxMzMuNDk2LDQ5My40ODYsMTg3LjkwNiw0OTUuNTA1LDI0Ny44M3ogTTI1NiwxNi4zNCAgICBjNjMuMTQyLDAsMTIwLjY0NywyNC41NTYsMTYzLjQ5OSw2NC42MDdsLTM0LjY2NywzNC42NjdDMzUwLjg3OCw4NC40MjksMzA1LjYyNiw2NS4zNjIsMjU2LDY1LjM2MnMtOTQuODc4LDE5LjA2Ny0xMjguODMyLDUwLjI1MiAgICBMOTIuNTAxLDgwLjk0N0MxMzUuMzUzLDQwLjg5NywxOTIuODU4LDE2LjM0LDI1NiwxNi4zNHogTTgwLjk0Nyw5Mi41MDFsMzQuNjY3LDM0LjY2NyAgICBjLTI5LjQ2NCwzMi4wODEtNDguMDk5LDc0LjI1LTUwLjA2NiwxMjAuNjYySDE2LjQ5NUMxOC41MTQsMTg3LjkwNiw0Mi42MzIsMTMzLjQ5Niw4MC45NDcsOTIuNTAxeiBNMTQ0LjM1NCwzODkuNzMgICAgYy0zLjQ2MS0yLjg5My04LjYxNC0yLjQzNS0xMS41MDksMS4wMjZjLTIuODk0LDMuNDYxLTIuNDM1LDguNjE0LDEuMDI2LDExLjUwOGMzMi4xMTksMjYuODYxLDcyLjMwOSw0Mi4zOTQsMTEzLjk1OSw0NC4xOTUgICAgdjQ5LjA0NUMxMjIuMTY0LDQ5MS4yNzMsMjAuNzI3LDM4OS44MzYsMTYuNDk1LDI2NC4xN0g2NS41NGMxLjgwMiw0MS42NTEsMTcuMzM0LDgxLjg0LDQ0LjE5NSwxMTMuOTU5ICAgIGMyLjg5MywzLjQ2Miw4LjA0NiwzLjkyMSwxMS41MDgsMS4wMjZjMy40NjEtMi44OTYsMy45MjEtOC4wNDgsMS4wMjYtMTEuNTA5Qzk2LjExLDMzNi4zNjcsODEuNzAyLDI5Ni43MTYsODEuNzAyLDI1NiAgICBjMC05Ni4xMDgsNzguMTktMTc0LjI5OCwxNzQuMjk4LTE3NC4yOThTNDMwLjI5OCwxNTkuODkyLDQzMC4yOTgsMjU2UzM1Mi4xMDgsNDMwLjI5OCwyNTYsNDMwLjI5OCAgICBDMjE1LjI4NCw0MzAuMjk4LDE3NS42MzMsNDE1Ljg5LDE0NC4zNTQsMzg5LjczeiBNMjY0LjE3LDQ5NS41MDV2LTQ5LjA1M2M3Mi45MTEtMy4wOTEsMTM1LjM0Ny00Ny4zMjIsMTY0LjY0Ni0xMTAuMDI2ICAgIGw0NS4zMjksMTguNzc2QzQzNy40MTgsNDM1LjY0NiwzNTcuNDcsNDkyLjM2MiwyNjQuMTcsNDk1LjUwNXogTTQ4MC40MTEsMzQwLjExMUw0MzUuMSwzMjEuMzQyICAgIGM2LjU3Mi0xNy45NTcsMTAuNTA0LTM3LjE3MiwxMS4zNTEtNTcuMTcyaDQ5LjA1M0M0OTQuNjA4LDI5MC44MDQsNDg5LjM0NywzMTYuMzQ3LDQ4MC40MTEsMzQwLjExMXoiIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yNTYsMTA4LjkzNmMtODEuMDkxLDAtMTQ3LjA2NCw2NS45NzMtMTQ3LjA2NCwxNDcuMDY0UzE3NC45MDksNDAzLjA2NCwyNTYsNDAzLjA2NFM0MDMuMDY0LDMzNy4wOTEsNDAzLjA2NCwyNTYgICAgUzMzNy4wOTEsMTA4LjkzNiwyNTYsMTA4LjkzNnogTTM4Ni40NjEsMjQ3LjgzaC03Ni4wNzhjLTAuNDEzLTIxLjczNy0yLjQ3My00Mi41OTItNS45OTQtNjEuMzE1ICAgIGMxNS41MDEtNS40MTQsMzAuMDgxLTEzLjQyNiw0My4wOTYtMjMuNzkyQzM2OS44NjQsMTg0LjY3NSwzODQuNCwyMTQuNTg5LDM4Ni40NjEsMjQ3LjgzeiBNMzM0Ljg3NiwxNTEuODI4ICAgIGMtMTAuNDEsNy44OTgtMjEuODc4LDE0LjE0Mi0zNC4wMDcsMTguNTg3Yy0xLjMzNy01LjI5OS0yLjgtMTAuMzc0LTQuMzk3LTE1LjE2NWMtMy42MDMtMTAuODA4LTcuNzAyLTE5Ljc5Ni0xMi4yMjctMjYuODkgICAgQzMwMi45MywxMzIuNDkxLDMyMC4xMjMsMTQwLjYyOSwzMzQuODc2LDE1MS44Mjh6IE0yMTcuOTYyLDI0Ny44M2MwLjM5NS0yMC4xNjEsMi4yNTEtMzkuNDU2LDUuNDEzLTU2Ljc4ICAgIGMxMC42MjgsMi40MjMsMjEuNTY1LDMuNjczLDMyLjYyNSwzLjY3M2MxMS4wNiwwLDIxLjk5OC0xLjI1MSwzMi42MjYtMy42NzNjMy4xNjIsMTcuMzI1LDUuMDE4LDM2LjYxOSw1LjQxMyw1Ni43OEgyMTcuOTYyeiAgICAgTTI5NC4wMzgsMjY0LjE3Yy0wLjM5NSwyMC4xNjEtMi4yNTEsMzkuNDU2LTUuNDEzLDU2Ljc4Yy0xMC42MjktMi40MjMtMjEuNTY2LTMuNjczLTMyLjYyNi0zLjY3MyAgICBjLTExLjA2LDAtMjEuOTk3LDEuMjUxLTMyLjYyNSwzLjY3M2MtMy4xNjItMTcuMzI1LTUuMDE4LTM2LjYxOS01LjQxMy01Ni43OEgyOTQuMDM4eiBNMjU2LDEyNS4yNzcgICAgYzYuNDA5LDAsMTYuMzM1LDkuMjMxLDI0Ljk3MSwzNS4xNDFjMS41MzgsNC42MTYsMi45NDgsOS41MTksNC4yMywxNC42NTVjLTkuNTExLDIuMTg0LTE5LjMwMSwzLjMxMS0yOS4yMDEsMy4zMTEgICAgYy05LjksMC0xOS42OTEtMS4xMjUtMjkuMjAxLTMuMzExYzEuMjgyLTUuMTM3LDIuNjkyLTEwLjA0LDQuMjMtMTQuNjU1QzIzOS42NjUsMTM0LjUwOCwyNDkuNTkxLDEyNS4yNzcsMjU2LDEyNS4yNzd6ICAgICBNMjI3Ljc2NiwxMjguMzU2Yy00LjUzLDcuMDk3LTguNjM0LDE2LjA3Ny0xMi4yNCwyNi44OTNjLTEuNTk2LDQuNzkxLTMuMDU5LDkuODY2LTQuMzk3LDE1LjE2NSAgICBjLTEyLjEyOS00LjQ0NS0yMy41OTctMTAuNjg5LTM0LjAwNy0xOC41ODdDMTkxLjg3OSwxNDAuNjI3LDIwOS4wNzgsMTMyLjQ4NywyMjcuNzY2LDEyOC4zNTZ6IE0xNjQuNTE0LDE2Mi43MjIgICAgYzEzLjAxNiwxMC4zNjUsMjcuNTk2LDE4LjM3OCw0My4wOTYsMjMuNzkyYy0zLjUyMSwxOC43MjMtNS41ODIsMzkuNTc5LTUuOTk0LDYxLjMxNmgtNzYuMDc4ICAgIEMxMjcuNiwyMTQuNTg5LDE0Mi4xMzYsMTg0LjY3NSwxNjQuNTE0LDE2Mi43MjJ6IE0xMjUuNTM5LDI2NC4xN2g3Ni4wNzhjMC40MTMsMjEuNzM3LDIuNDczLDQyLjU5Miw1Ljk5NCw2MS4zMTYgICAgYy0xNS41LDUuNDE0LTMwLjA4MSwxMy40MjYtNDMuMDk2LDIzLjc5MkMxNDIuMTM2LDMyNy4zMjUsMTI3LjU5OSwyOTcuNDExLDEyNS41MzksMjY0LjE3eiBNMTc3LjEyMywzNjAuMTcyICAgIGMxMC40MS03Ljg5OCwyMS44NzgtMTQuMTQyLDM0LjAwNy0xOC41ODdjMS4zMzgsNS4yOTksMi44MDEsMTAuMzc0LDQuMzk4LDE1LjE2NWMzLjYwNSwxMC44MTQsNy43MDksMTkuNzk2LDEyLjIzOCwyNi44OTMgICAgQzIwOS4wNzcsMzc5LjUxMywxOTEuODc5LDM3MS4zNzMsMTc3LjEyMywzNjAuMTcyeiBNMjU2LDM4Ni43MjNjLTYuNDA5LDAtMTYuMzM1LTkuMjMxLTI0Ljk3MS0zNS4xNDEgICAgYy0xLjUzOC00LjYxNi0yLjk0OC05LjUxOS00LjIzLTE0LjY1NWM5LjUxMS0yLjE4NSwxOS4zMDEtMy4zMTEsMjkuMjAxLTMuMzExYzkuOSwwLDE5LjY5MSwxLjEyNSwyOS4yMDEsMy4zMTEgICAgYy0xLjI4Miw1LjEzNy0yLjY5MiwxMC4wNC00LjIzLDE0LjY1NUMyNzIuMzM1LDM3Ny40OTIsMjYyLjQwOSwzODYuNzIzLDI1NiwzODYuNzIzeiBNMjg0LjIzNCwzODMuNjQ0ICAgIGM0LjUzLTcuMDk3LDguNjM0LTE2LjA3NywxMi4yNC0yNi44OTNjMS41OTYtNC43OTEsMy4wNTktOS44NjYsNC4zOTctMTUuMTY1YzEyLjEyOSw0LjQ0NSwyMy41OTcsMTAuNjg5LDM0LjAwNywxOC41ODcgICAgQzMyMC4xMjEsMzcxLjM3MywzMDIuOTIzLDM3OS41MTMsMjg0LjIzNCwzODMuNjQ0eiBNMzQ3LjQ4NiwzNDkuMjc4Yy0xMy4wMTYtMTAuMzY1LTI3LjU5Ni0xOC4zNzgtNDMuMDk2LTIzLjc5MiAgICBjMy41MjEtMTguNzIzLDUuNTgyLTM5LjU3OSw1Ljk5NC02MS4zMTVoNzYuMDc4QzM4NC40LDI5Ny40MTEsMzY5Ljg2NCwzMjcuMzI1LDM0Ny40ODYsMzQ5LjI3OHoiIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                        <b><span>5</span></b> organizações
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://dados.cultura.gov.br/group">
+                        <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwMy44Myw0NjIuOTc5SDQ5LjAyMVY4LjE3YzAtNC41MTMtMy42NTgtOC4xNy04LjE3LTguMTdIOC4xN0MzLjY1OCwwLDAsMy42NTcsMCw4LjE3czMuNjU4LDguMTcsOC4xNyw4LjE3aDI0LjUxMSAgICB2NzYuMjU1SDguMTdjLTQuNTEyLDAtOC4xNywzLjY1Ny04LjE3LDguMTdjMCw0LjUxMywzLjY1OCw4LjE3LDguMTcsOC4xN2gyNC41MTF2NzYuMjU1SDguMTdjLTQuNTEyLDAtOC4xNywzLjY1Ny04LjE3LDguMTcgICAgczMuNjU4LDguMTcsOC4xNyw4LjE3aDI0LjUxMXY3Ni4yNTVIOC4xN2MtNC41MTIsMC04LjE3LDMuNjU3LTguMTcsOC4xN3MzLjY1OCw4LjE3LDguMTcsOC4xN2gyNC41MTF2NzYuMjU1SDguMTcgICAgYy00LjUxMiwwLTguMTcsMy42NTctOC4xNyw4LjE3YzAsNC41MTMsMy42NTgsOC4xNyw4LjE3LDguMTdoMjQuNTExdjc2LjI1NUg4LjE3Yy00LjUxMiwwLTguMTcsMy42NTctOC4xNyw4LjE3ICAgIHMzLjY1OCw4LjE3LDguMTcsOC4xN2gyNC41MTF2MjQuNTExYzAsNC41MTMsMy42NTgsOC4xNyw4LjE3LDguMTdzOC4xNy0zLjY1Nyw4LjE3LTguMTd2LTI0LjUxMWg3Ni4yNTV2MjQuNTExICAgIGMwLDQuNTEzLDMuNjU4LDguMTcsOC4xNyw4LjE3YzQuNTEyLDAsOC4xNy0zLjY1Nyw4LjE3LTguMTd2LTI0LjUxMWg3Ni4yNTV2MjQuNTExYzAsNC41MTMsMy42NTgsOC4xNyw4LjE3LDguMTcgICAgYzQuNTEyLDAsOC4xNy0zLjY1Nyw4LjE3LTguMTd2LTI0LjUxMWg3Ni4yNTV2MjQuNTExYzAsNC41MTMsMy42NTcsOC4xNyw4LjE3LDguMTdzOC4xNy0zLjY1Nyw4LjE3LTguMTd2LTI0LjUxMWg3Ni4yNTV2MjQuNTExICAgIGMwLDQuNTEzLDMuNjU3LDguMTcsOC4xNyw4LjE3YzQuNTEzLDAsOC4xNy0zLjY1Nyw4LjE3LTguMTd2LTI0LjUxMWg3Ni4yNTV2MjQuNTExYzAsNC41MTMsMy42NTcsOC4xNyw4LjE3LDguMTcgICAgczguMTctMy42NTcsOC4xNy04LjE3di0zMi42ODFDNTEyLDQ2Ni42MzYsNTA4LjM0Myw0NjIuOTc5LDUwMy44Myw0NjIuOTc5eiIgZmlsbD0iIzFmNmU3ZSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iMTkwLjYzOCIgY3k9IjM2Mi4yMTMiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjE5MC42MzgiIGN5PSIzMjEuMzYyIiByPSI4LjE3IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8Y2lyY2xlIGN4PSIyMjYuMDIxIiBjeT0iMzQxLjc4NyIgcj0iOC4xNyIgZmlsbD0iIzFmNmU3ZSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iMjI2LjAyMSIgY3k9IjMwMC45MzYiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjE5MC42MzgiIGN5PSIyODAuNTExIiByPSI4LjE3IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8Y2lyY2xlIGN4PSIxNTUuMjU2IiBjeT0iMzAwLjkzNiIgcj0iOC4xNyIgZmlsbD0iIzFmNmU3ZSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iMTU1LjI1NiIgY3k9IjM0MS43ODciIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xOTAuNjM4LDIzMS40ODljLTQ5LjU1NiwwLTg5Ljg3Miw0MC4zMTctODkuODcyLDg5Ljg3MnM0MC4zMTYsODkuODcyLDg5Ljg3Miw4OS44NzIgICAgYzE3LjY5NywwLDM0LjgzMy01LjE1NCw0OS41NTgtMTQuOTA2YzMuNzYzLTIuNDkxLDQuNzkyLTcuNTYsMi4zMDEtMTEuMzIzYy0yLjQ5LTMuNzYzLTcuNTYtNC43OTItMTEuMzIzLTIuMzAxICAgIGMtMTIuMDQyLDcuOTc0LTI2LjA1OSwxMi4xODktNDAuNTM2LDEyLjE4OWMtNDAuNTQ2LDAtNzMuNTMyLTMyLjk4Ni03My41MzItNzMuNTMyYzAtNDAuNTQ2LDMyLjk4Ni03My41MzIsNzMuNTMyLTczLjUzMiAgICBzNzMuNTMyLDMyLjk4Niw3My41MzIsNzMuNTMyYzAsMTQuNDc4LTQuMjE1LDI4LjQ5NC0xMi4xODksNDAuNTM2Yy0yLjQ5MSwzLjc2Mi0xLjQ2MSw4LjgzLDIuMzAxLDExLjMyMyAgICBjMy43NjIsMi40OTIsOC44MzMsMS40NjIsMTEuMzIzLTIuMzAxYzkuNzUyLTE0LjcyNSwxNC45MDYtMzEuODYyLDE0LjkwNi00OS41NTggICAgQzI4MC41MTEsMjcxLjgwNywyNDAuMTk0LDIzMS40ODksMTkwLjYzOCwyMzEuNDg5eiIgZmlsbD0iIzFmNmU3ZSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iMzgxLjI3NyIgY3k9IjIxMi40MjYiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjQyMi4xMjgiIGN5PSIyMDEuNDc3IiByPSI4LjE3IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8Y2lyY2xlIGN4PSI0NTIuMDMxIiBjeT0iMTcxLjU3NCIgcj0iOC4xNyIgZmlsbD0iIzFmNmU3ZSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iNDYyLjk3OSIgY3k9IjEzMC43MjMiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjQ1Mi4wMzEiIGN5PSI4OS44NzIiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjQyMi4xMjgiIGN5PSI1OS45NjkiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjM4MS4yNzciIGN5PSI0OS4wMjEiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjM0MC40MjYiIGN5PSI1OS45NjkiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjMxMC41MjMiIGN5PSI4OS44NzIiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjI5OS41NzQiIGN5PSIxMzAuNzIzIiByPSI4LjE3IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8Y2lyY2xlIGN4PSIzMTAuNTIzIiBjeT0iMTcxLjU3NCIgcj0iOC4xNyIgZmlsbD0iIzFmNmU3ZSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iMzQwLjQyNiIgY3k9IjIwMS40NzciIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjM4MS4yNzciIGN5PSIxNzEuNTc0IiByPSI4LjE3IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8Y2lyY2xlIGN4PSIzODEuMjc3IiBjeT0iMTMwLjcyMyIgcj0iOC4xNyIgZmlsbD0iIzFmNmU3ZSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iNDE2LjY1OSIgY3k9IjE1MS4xNDkiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjQxNi42NTkiIGN5PSIxMTAuMjk4IiByPSI4LjE3IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8Y2lyY2xlIGN4PSIzODEuMjc3IiBjeT0iODkuODcyIiByPSI4LjE3IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8Y2lyY2xlIGN4PSIzNDUuODk0IiBjeT0iMTEwLjI5OCIgcj0iOC4xNyIgZmlsbD0iIzFmNmU3ZSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPGNpcmNsZSBjeD0iMzQ1Ljg5NCIgY3k9IjE1MS4xNDkiIHI9IjguMTciIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zODEuMjc3LDBjLTcyLjA4MSwwLTEzMC43MjMsNTguNjQzLTEzMC43MjMsMTMwLjcyM3M1OC42NDMsMTMwLjcyMywxMzAuNzIzLDEzMC43MjMgICAgYzI4LjkyOCwwLDU2LjM0Ni05LjI2NSw3OS4yODgtMjYuNzk0YzMuNTg2LTIuNzQsNC4yNzItNy44NjcsMS41MzMtMTEuNDUzYy0yLjc0LTMuNTg1LTcuODY3LTQuMjc0LTExLjQ1Mi0xLjUzMyAgICBjLTIwLjA2OSwxNS4zMzUtNDQuMDU3LDIzLjQzOS02OS4zNjgsMjMuNDM5Yy02My4wNzEsMC0xMTQuMzgzLTUxLjMxMi0xMTQuMzgzLTExNC4zODNTMzE4LjIwNiwxNi4zNCwzODEuMjc3LDE2LjM0ICAgIFM0OTUuNjYsNjcuNjUzLDQ5NS42NiwxMzAuNzIzYzAsMjUuMzExLTguMTA0LDQ5LjI5OS0yMy40MzksNjkuMzdjLTIuNzQsMy41ODUtMi4wNTMsOC43MTMsMS41MzMsMTEuNDUyICAgIGMzLjU4NSwyLjc0LDguNzEzLDIuMDUzLDExLjQ1Mi0xLjUzM0M1MDIuNzM1LDE4Ny4wNyw1MTIsMTU5LjY1MSw1MTIsMTMwLjcyM0M1MTIsNTguNjQzLDQ1My4zNTcsMCwzODEuMjc3LDB6IiBmaWxsPSIjMWY2ZTdlIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+                        <b><span>1</span></b> grupo
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://dados.cultura.gov.br/related">
+                        <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMi4wMDEgNTEyLjAwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyLjAwMSA1MTIuMDAxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUxMiwyNTYuOTcxYzAtMTIuMjM5LTguMjExLTIyLjU5Ni0xOS40MTQtMjUuODUxVjEwMi43NTZDNTAzLjc4OSw5OS41MDEsNTEyLDg5LjE0NSw1MTIsNzYuOTA1ICAgIGMwLTEyLjI0LTguMjExLTIyLjU5Ni0xOS40MTQtMjUuODUxVjcuNWMwLTQuMTQzLTMuMzU3LTcuNS03LjUtNy41cy03LjUsMy4zNTctNy41LDcuNXY0My41NTUgICAgYy04LjQ3NiwyLjQ2Mi0xNS4yMzgsOC45ODktMTguMDI5LDE3LjMyMWMtNTkuMTcxLDMuMDk2LTExNS44MzEsMjIuODQ3LTE2NC4xNzUsNTcuMjg2bC03OS43MDYsNTYuNzhsLTYuNzgyLTExLjI2OSAgICBDMTc1LjQwMywxMTUuNTMsMTE3LjQ1OCw3OC4zMDIsNTMuMTMzLDcwLjgxYy0yLjIwNC05LjQ4Mi05LjQzNC0xNy4wNTktMTguNzE4LTE5Ljc1NlY3LjVjMC00LjE0My0zLjM1Ny03LjUtNy41LTcuNSAgICBjLTQuMTQzLDAtNy41LDMuMzU3LTcuNSw3LjV2NDMuNTU1QzguMjExLDU0LjMxLDAsNjQuNjY2LDAsNzYuOTA1YzAsMTIuMjM5LDguMjExLDIyLjU5NiwxOS40MTQsMjUuODUxVjIzMS4xMiAgICBDOC4yMTEsMjM0LjM3NSwwLDI0NC43MzEsMCwyNTYuOTcxczguMjExLDIyLjU5NiwxOS40MTQsMjUuODUxVjQwNi4wMUM4LjIxMSw0MDkuMjY0LDAsNDE5LjYyLDAsNDMxLjg1OSAgICBzOC4yMTEsMjIuNTk2LDE5LjQxNCwyNS44NTF2NDYuNzljMCw0LjE0MywzLjM1Nyw3LjUsNy41LDcuNXM3LjUtMy4zNTcsNy41LTcuNXYtNDYuNzljOC41NzMtMi40OSwxNS4zOTQtOS4xNDEsMTguMTI0LTE3LjYxICAgIGM1NS43ODUtNC41MzEsMTA5LjQwNC0yMy43NzksMTU1LjM2NS01NS44MjFsNzguNzItNTQuODc4bDQuODM1LDguMDMyYzE4LjAwMywyOS45MDgsNDMuNDIzLDU1LjA3LDczLjUxMiw3Mi43NjYgICAgYzI4LjU5OCwxNi44MTgsNjEuMDM2LDI2LjY3NSw5NC4xMTksMjguNjM3YzIuNDM1LDkuMDY5LDkuNTAxLDE2LjI2MiwxOC40OTcsMTguODc1djQ2Ljc5YzAsNC4xNDMsMy4zNTcsNy41LDcuNSw3LjUgICAgczcuNS0zLjM1Nyw3LjUtNy41di00Ni43OUM1MDMuNzg5LDQ1NC40NTUsNTEyLDQ0NC4wOTksNTEyLDQzMS44NTlzLTguMjExLTIyLjU5Ni0xOS40MTQtMjUuODUxVjI4Mi44MjEgICAgQzUwMy43ODksMjc5LjU2Niw1MTIsMjY5LjIxLDUxMiwyNTYuOTcxeiBNNDg1LjA4Niw2NC45OTFjNi41NjksMCwxMS45MTQsNS4zNDUsMTEuOTE0LDExLjkxNCAgICBjMCw2LjQ5OC01LjIyOSwxMS43OTctMTEuNjk5LDExLjkxMmMtMC4xNDMtMC4wMDQtMC4yODctMC4wMDQtMC40MywwYy02LjQ3MS0wLjExNS0xMS42OTktNS40MTQtMTEuNjk5LTExLjkxMiAgICBDNDczLjE3Miw3MC4zMzYsNDc4LjUxOCw2NC45OTEsNDg1LjA4Niw2NC45OTF6IE0xNSw3Ni45MDVjMC02LjU2OSw1LjM0NS0xMS45MTQsMTEuOTE0LTExLjkxNHMxMS45MTQsNS4zNDUsMTEuOTE0LDExLjkxNCAgICBjMCw2LjQ5OC01LjIyOSwxMS43OTctMTEuNjk5LDExLjkxMmMtMC4wNzEtMC4wMDItMC4xNDMtMC4wMDMtMC4yMTUtMC4wMDNzLTAuMTQ0LDAuMDAxLTAuMjE1LDAuMDAzICAgIEMyMC4yMjksODguNzAyLDE1LDgzLjQwMywxNSw3Ni45MDV6IE0xNSwyNTYuOTcxYzAtNi41NjksNS4zNDUtMTEuOTE0LDExLjkxNC0xMS45MTRzMTEuOTE0LDUuMzQ1LDExLjkxNCwxMS45MTQgICAgYzAsNi41MzctNS4yOTIsMTEuODYxLTExLjgxNywxMS45MTRjLTAuMDMyLTAuMDAxLTAuMDY0LTAuMDAxLTAuMDk3LTAuMDAxcy0wLjA2NCwwLTAuMDk3LDAuMDAxICAgIEMyMC4yOTQsMjY4LjgzMiwxNSwyNjMuNTA4LDE1LDI1Ni45NzF6IE0yNi45MTQsNDQzLjc3M2MtNi41NjksMC0xMS45MTQtNS4zNDUtMTEuOTE0LTExLjkxNGMwLTYuNTY5LDUuMzQ1LTExLjkxNCwxMS45MTQtMTEuOTE0ICAgIHMxMS45MTQsNS4zNDUsMTEuOTE0LDExLjkxNEMzOC44MjgsNDM4LjQyOCwzMy40ODQsNDQzLjc3MywyNi45MTQsNDQzLjc3M3ogTTE5OS4zMjYsMzcxLjk3NCAgICBjLTQzLjMzNywzMC4yMTItOTMuODIyLDQ4LjQ4NC0xNDYuMzc5LDUzLjAzOWMtMi40MDMtOS4xMy05LjQ5NC0xNi4zNzgtMTguNTMyLTE5LjAwNFYyODIuODIxICAgIGM5LjE4Ni0yLjY2OSwxNi4zNTktMTAuMTExLDE4LjY0Ni0xOS40NTJjNTAuNzE4LTQuMjg1LDk5Ljk0MS0yMS4wNzIsMTQyLjcxNy00OC43MjNjMy40NzktMi4yNDksNC40NzYtNi44OTIsMi4yMjgtMTAuMzcgICAgYy0yLjI1LTMuNDc5LTYuODk1LTQuNDc3LTEwLjM3LTIuMjI4Yy00MC41NCwyNi4yMDYtODcuMTYsNDIuMTU4LTEzNS4yMTUsNDYuMzJjLTIuODA2LTguMjk3LTkuNTU0LTE0Ljc5NC0xOC4wMDUtMTcuMjQ5VjEwMi43NTYgICAgYzguMzQ1LTIuNDI0LDE1LjAyOS04Ljc4OSwxNy44OTctMTYuOTM4YzU5LjM2OSw3LjIsMTEyLjc4Nyw0MS42ODMsMTQzLjczLDkzLjA5Mmw4Mi44MjksMTM3LjYwOUwxOTkuMzI2LDM3MS45NzR6ICAgICBNNDU5LjM5Niw0MjMuODI4Yy02NC4xMjgtMy45NS0xMjEuODE1LTM4Ljg1NS0xNTUuMDg2LTk0LjEzMmwtODAuODc1LTEzNC4zNjNsODAuNjUtNTcuNDU0ICAgIGM0NS42NC0zMi41MTMsOTkuMDY0LTUxLjI3MSwxNTQuODg3LTU0LjQ0OGMyLjMxOSw5LjI4MSw5LjQ3LDE2LjY2OSwxOC42MTQsMTkuMzI1VjIzMS4xMiAgICBjLTguNjQyLDIuNTExLTE1LjUwMiw5LjI0NS0xOC4xODgsMTcuODEyYy01NC4wNzksMi44MTktMTA2LjcyOSwxOS41MzgtMTUyLjU0NCw0OC40NzhjLTMuNTAyLDIuMjEyLTQuNTQ4LDYuODQ0LTIuMzM2LDEwLjM0NiAgICBjMi4yMTIsMy41MDIsNi44NDUsNC41NDgsMTAuMzQ2LDIuMzM2YzQzLjMzOC0yNy4zNzQsOTMuMDk2LTQzLjI3LDE0NC4yMy00Ni4xMjFjMi40NDEsOS4wNTgsOS41MDQsMTYuMjQsMTguNDkxLDE4Ljg1MnYxMjMuMTg4ICAgIEM0NjguOTQzLDQwOC41Miw0NjIuMDgxLDQxNS4yNTksNDU5LjM5Niw0MjMuODI4eiBNNDk3LDQzMS44NTljMCw2LjU2OS01LjM0NSwxMS45MTQtMTEuOTE0LDExLjkxNCAgICBjLTYuNTY5LDAtMTEuOTE0LTUuMzQ1LTExLjkxNC0xMS45MTRjMC02LjU2OSw1LjM0NS0xMS45MTQsMTEuOTE0LTExLjkxNEM0OTEuNjU2LDQxOS45NDUsNDk3LDQyNS4yOSw0OTcsNDMxLjg1OXogICAgIE00ODUuMTg0LDI2OC44ODVjLTAuMDY0LTAuMDAyLTAuMTI5LTAuMDAyLTAuMTkzLDBjLTYuNTI1LTAuMDUzLTExLjgxNy01LjM3Ny0xMS44MTctMTEuOTE0YzAtNi41NjksNS4zNDUtMTEuOTE0LDExLjkxNC0xMS45MTQgICAgYzYuNTY5LDAsMTEuOTEzLDUuMzQ0LDExLjkxMywxMS45MTRDNDk3LDI2My41MDgsNDkxLjcwOCwyNjguODMyLDQ4NS4xODQsMjY4Ljg4NXoiIGZpbGw9IiMxZjZlN2UiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                        <b><span>8</span></b> itens relacionados
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+          </div>
+        </div>
+      <div role="main">
+        <div class="container">
+          <div class="row row1">
+
+
+
+          
+            <div class="span6 col1">
+              <!-- Snippet home/snippets/search.html start -->
+              <!-- 
+              <div class="module module-search module-narrow module-shallow box">
+                <form class="module-content search-form" method="get" action="http://dados.cultura.gov.br/dataset">
+                  <h3 class="heading">Pesquisar dados</h3>
+                  <div class="search-input control-group search-giant">
+                    <input type="text" class="search" name="q" value="" autocomplete="off" placeholder="Ex.: meio ambiente">
+                    <button type="submit">
+                      <i class="icon-search"></i>
+                      <span>Pesquisar</span>
+                    </button>
+                  </div>
+                </form>
+                <div class="tags">
+                  <h3>Etiquetas populares</h3>
+
+                  <a class="tag" href="http://dados.cultura.gov.br/dataset?tags=cultura">cultura</a>
+
+                  <a class="tag" href="http://dados.cultura.gov.br/dataset?tags=cinema">cinema</a>
+
+                  <a class="tag" href="http://dados.cultura.gov.br/dataset?tags=filme">filme</a>
+
+                </div>
+              </div>
+              -->
+              <!-- Snippet home/snippets/search.html end -->
+              <!-- Snippet home/snippets/stats.html start -->
+              <!--
+              <div class="box stats">
+                <div class="inner">
+                  <h3>Portal de Dados da Cultura estatísticas</h3>
+                  <ul>
+
+                    <li>
+                      <a href="http://dados.cultura.gov.br/dataset">
+                        <b><span>14</span></b> conjuntos de dados
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://dados.cultura.gov.br/organization">
+                        <b><span>5</span></b> organizações
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://dados.cultura.gov.br/group">
+                        <b><span>1</span></b> grupo
+                      </a>
+                    </li>
+                    <li>
+                      <a href="http://dados.cultura.gov.br/related">
+                        <b><span>8</span></b> itens relacionados
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+               -->
+              <!-- Snippet home/snippets/stats.html end -->
+
+
+            </div>
+            <div class="span6 col2">
+
+
+              <!-- Snippet home/snippets/promoted.html start -->
+
+              <!--
+              <div class="module-content box">
+                <header>
+
+                  <p>O Portal de Dados do Ministério da Cultura disponibiliza de forma pública, dados que são gerados ou mantidos pelos sistemas de informações do Ministérios e de seus órgãos vinculados. O portal faz parte do <a href="http://sniic.cultura.gov.br/">Sistema Nacional de Informações e Indicadores Culturais - SNIIC</a>.
+                  </p>
+
+                </header>
+
+
+                <section class="featured media-overlay hidden-phone">
+                  <h2 class="media-heading">Esta é uma seção de destaque</h2>
+
+                  <a class="media-image" href="http://dados.cultura.gov.br/#">
+                    <img src="./images/placeholder-420x220.png" alt="Placeholder" width="420" height="220">
+                  </a>
+
+                </section>
+
+              </div>
+               -->
+              <!-- Snippet home/snippets/promoted.html end -->
+
+
+            </div>
+          </div>
+          <div class="row row2">
+            <div class="span6 col2">
+
+
+              <!-- Snippet home/snippets/featured_organization.html start -->
+
+
+
+              <div class="box">
+
+                <!-- Snippet snippets/organization_item.html start -->
+                <section class="group-list module module-narrow module-shallow">
+                  <header class="module-heading">
+
+
+                    <a class="module-image" href="http://dados.cultura.gov.br/organization/ancine">
+                      <img src="./images/2016-03-02-130612.939367indice.png" alt="ancine">
+                    </a>
+                    <h3 class="media-heading"><a href="http://dados.cultura.gov.br/organization/ancine">Ancine</a></h3>
+
+
+                    <p>Criada em 2001 pela Medida Provisória 2228-1, a...</p>
+
+
+                  </header>
+
+
+
+                  <!-- Snippet snippets/package_list.html start -->
+
+
+
+
+                  <!-- Snippet snippets/package_list.html end -->
+
+                </section>
+                <!-- Snippet snippets/organization_item.html end -->
+
+              </div>
+
+              <!-- Snippet home/snippets/featured_organization.html end -->
+
+
+            </div>
+            <div class="span6 col1">
+
+
+              <!-- Snippet home/snippets/featured_group.html start -->
+
+
+
+              <div class="box">
+
+                <!-- Snippet snippets/group_item.html start -->
+
+                <section class="group-list module module-narrow module-shallow">
+
+                  <header class="module-heading">
+
+
+
+
+                    <a class="module-image" href="http://dados.cultura.gov.br/group/artes-senicas">
+                      <img src="./images/placeholder-group.png" alt="artes-senicas">
+                    </a>
+
+
+                    <h3 class="media-heading"><a href="http://dados.cultura.gov.br/group/artes-senicas">Artes Cênicas</a></h3>
+
+
+
+
+                  </header>
+
+
+
+
+
+                  <!-- Snippet snippets/package_list.html start -->
+
+
+
+
+                  <!-- Snippet snippets/package_list.html end -->
+
+
+                </section>
+
+                <!-- Snippet snippets/group_item.html end -->
+
+              </div>
+
+              <!-- Snippet home/snippets/featured_group.html end -->
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Snippet home/layout2.html end -->
+
+
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+
+        <div class="row">
+          <div class="span8 footer-links">
+
+            <ul class="unstyled">
+
+              <li><a href="http://dados.cultura.gov.br/about">Sobre Portal de Dados da Cultura</a></li>
+
+            </ul>
+            <ul class="unstyled">
+
+
+              <li><a href="http://docs.ckan.org/en/ckan-2.4.0/api/">API do CKAN</a></li>
+              <li><a href="http://www.okfn.org/">Open Knowledge Foundation</a></li>
+              <li>
+                <a href="http://www.opendefinition.org/okd/"><img src="./images/od_80x15_blue.png"></a>
+              </li>
+
+            </ul>
+
+          </div>
+          <div class="span4 attribution">
+
+            <p><strong>Impulsionado por</strong> <a class="hide-text ckan-footer-logo" href="http://ckan.org/">CKAN</a></p>
+
+
+
+            <!-- Snippet snippets/language_selector.html start -->
+
+
+            <form class="form-inline form-select lang-select" action="http://dados.cultura.gov.br/util/redirect" data-module="select-switch" method="POST">
+              <label for="field-lang-select">Idioma</label>
+              <div class="select2-container lang-container" id="s2id_field-lang-select" style="width: 220px;">
+                <a href="javascript:void(0)" class="select2-choice" tabindex="-1"> <span class="select2-chosen" id="select2-chosen-1">
+        português (Brasil)
+      </span><abbr class="select2-search-choice-close"></abbr> <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a>
+                <label for="s2id_autogen1" class="select2-offscreen">Idioma</label>
+                <input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1">
+                <div class="select2-drop select2-display-none lang-dropdown select2-with-searchbox">
+                  <div class="select2-search">
+                    <label for="s2id_autogen1_search" class="select2-offscreen">Idioma</label>
+                    <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search"
+                    placeholder=""> </div>
+                  <ul class="select2-results" role="listbox" id="select2-results-1"> </ul>
+                </div>
+              </div>
+              <select id="field-lang-select" name="url" data-module="autocomplete" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container" tabindex="-1" title="Idioma" class="select2-offscreen">
+
+                <option value="/pt_BR/" selected="selected">
+                  português (Brasil)
+                </option>
+
+              </select>
+              <button class="btn js-hide" type="submit">Ir</button>
+            </form>
+            <!-- Snippet snippets/language_selector.html end -->
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+    </footer>
+
+    <script>
+      document.getElementsByTagName('html')[0].className += ' js';
+
+    </script>
+    <script type="text/javascript" src="./images/jquery.min.js.download"></script>
+    <script type="text/javascript" src="./images/select2.min.js.download"></script>
+    <script type="text/javascript" src="./images/image-upload.min.js.download"></script>
+    <span role="status" aria-live="polite" class="select2-hidden-accessible"></span></body>
+
+</html>
