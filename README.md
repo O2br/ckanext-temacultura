@@ -111,3 +111,10 @@ como o pip não está substituindo os arquivos do build, remover essa pasta ante
 ```
 rm -rf /usr/local/lib/python2.7/dist-packages/ckanext/temacultura/
 ```
+Faça isso ou force o rebuild:
+
+```
+pip install . --ignore-installed
+```
+
+
