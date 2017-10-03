@@ -103,3 +103,11 @@ ckan-paster --plugin=ckan sysadmin add admin --config=/etc/ckan/default/developm
 ou
 ckan-paster --plugin=ckan create-test-data -c /etc/ckan/default/development.ini
 ```
+
+## PS produção:
+
+como o pip não está substituindo os arquivos do build, remover essa pasta antes do pip install.
+
+```
+rm -rf /usr/local/lib/python2.7/dist-packages/ckanext/temacultura/
+```
