@@ -106,6 +106,12 @@ ckan-paster --plugin=ckan create-test-data -c /etc/ckan/default/development.ini
 
 ## PS produção:
 
+Antes de recompilar a aplicação, não esqueça de fazer o git pull na pasta do projeto
+
+```
+git pull
+```
+
 como o pip não está substituindo os arquivos do build, remover essa pasta antes do pip install.
 
 ```
